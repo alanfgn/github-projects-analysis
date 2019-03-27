@@ -1,0 +1,11 @@
+.sonarlint
+mongodata
+
+__pycache__/
+*.py[cod]
+*$py.class
+
+*.egg
+.python-version
+.env
+

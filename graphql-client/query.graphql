@@ -1,0 +1,26 @@
+query listrepos($query: String!, $quantity: Int!, $cursor: String) {
+  search(query: $query, type: REPOSITORY, first: $quantity, after: $cursor) {        
+    edges {
+      node {
+        ... on Repository {
+          id
+          name
+          owner {
+            id
+            login
+          }
+          primaryLanguage {
+            name
+          }
+          sshUrl
+          createdAt
+        }
+      }
+    }
+       
+    pageInfo {
+       hasNextPage,
+       endCursor
+    }
+  }
+}
