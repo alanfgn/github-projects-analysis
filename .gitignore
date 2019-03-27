@@ -1,5 +1,5 @@
 .sonarlint
-mongodata
+mongodata/*
 
 __pycache__/
 *.py[cod]
